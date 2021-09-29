@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Titre de l'onglet -->
+		<title>Combinaisons</title>
+		<!-- Lien css -->
+		<link rel="stylesheet" type="text/css" href="U3A2_KparmiN.css">
+		<!--changer l'image de l'onglet-->
+		<link rel="icon" href="https://img.pngio.com/maths-multiple-multiplication-icon-with-png-and-vector-format-maths-png-512_512.png"/>
+		<!-- lien Javascript-->
+		<script type="text/javascript" src="U3A2_KparmiN.js"></script>
+	</head>
+	<body>
+		<!--Titre de la page-->
+		<h1>Les combinaisons de k parmis n</h1>
+
+		<!-- Explication du fonctionnement de la page -->
+		<p>Ce programme calcule le nombre de combinaisons de k objets choisis parmi n objets discernables</p>
+		
+		<!-- Endroit dont l'utilisateur entre les valeurs numériques-->
+		<form>
+			<label>Inscrire le nombre d'objets à choisir (k)</label>
+			<input class="nombreK" type="number" name="k" id="k">
+			<label><br>Inscrire le nombre d'objets parmis lesquels choisir (n) </label>
+			<input class="nombreN" type="number" name="n" id="n">
+		</form>
+		
+		<!-- Bouton qui appelle la fonction calculer -->
+		<div class="button">
+			<button id="calculer" onclick="calculer()">Calculer le nombre de combinaisons</button>
+		</div>
+		<!-- La réponce vas se sittuer dans ce tag de texte -->
+		<h3 id="outnote"></h3>
+	</body>
+</html>

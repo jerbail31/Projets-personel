@@ -1,0 +1,57 @@
+/*Alligne le texte au centre de la page */
+h1 {
+	text-align: center;
+}
+
+/*Alligne le texte au centre de la page */
+p {
+	text-align: center;
+}
+
+/*Alligne le texte au centre de la page */
+h3 {
+	text-align: center;
+}
+
+/* Ajuste la location des boites de texte vide */
+form {
+	padding-top: 30px;
+	padding-right: 25%;
+	text-align: right;
+}
+
+/*Ajuste les boites de texte vide */
+input {
+	padding: 8px 8px;
+	margin:	8px 5px;
+	width: 50px;
+	font-size: 20px;
+}
+
+/* Change l'apparance du bouton*/
+button {
+	background-color: grey; 
+  	border: 1px solid black;
+  	color: white;
+	padding: 15px 32px;
+	text-align: center;
+    display: inline-block;
+   	font-size: 16px;
+	cursor: pointer;
+}
+/* Change la location du bouton */
+.button {
+	text-align: center;
+	padding-top: 25px;
+}
+/* Effet lorsqu'une souris se promène sur un bouton */
+button:hover {
+  	background-color: white;
+  	color: grey;
+}
+
+/* Effet lors d'un click sur un bouton */
+button:active {
+	background-color: grey;
+  	color: white;
+}
