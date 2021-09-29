@@ -1,0 +1,96 @@
+/* Alligne le titre de la page au centre */
+h1 {
+	text-align: center;
+
+}
+
+/* Modifie l'apparance des boutons */
+.btn-group .button {
+	background-color: grey; 
+  	border: 1px solid black;
+  	color: white;
+  	padding: 15px 32px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	cursor: pointer;
+ 	width: 33.33%;
+  	float: left;
+  	position: static;
+  	right:0px;
+}
+
+/* Alligne le groupe de boutons au centre de la page */
+.btn-group {
+	align-items: center;
+}
+
+/* Effet lorsqu'une souris se promène sur un bouton */
+.btn-group .button:hover {
+  	background-color: white;
+  	color: grey;
+}
+
+/* Effet lors d'un click sur un bouton */
+.btn-group .button:active {
+	background-color: grey;
+  	color: white;
+}
+
+/* Modifie les boite de texte pour les noms */
+.info .nom {
+	padding: 12px 20px;
+	margin:	8px 5px;
+}
+
+/* Modifie les boite de texte pour les notes */
+.info .note {
+	padding: 5px 5px;
+	margin:	8px 5px;
+	width: 10%;
+}
+
+/* Alligne ce qui est dans la classe info au centre */
+.info {
+	text-align: center;
+}
+
+/* Modifie l'apparence du texte dans les tags p */
+p {
+	font-size: 25px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+/* Modifie l'apparence du tableau */
+table {
+	width:100%;
+	border-collapse: collapse;
+}
+
+/* Modifie la bordure des éléments du tableau */
+table, th, td {
+  	border: 1px solid black;
+}
+
+/* Modifie l'apparence des donnés du tableau */
+td {
+  	padding: 10px;
+  	text-align: left;
+}
+
+/* Modifie l'apparence des titres du tableau */
+th {
+	padding: 15px;
+}
+
+/* Ajoute l'effet d'avoir un tableau avec un arrière plan rayé */
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+/* Ajoute un effet lorsqu'un bouton est désactivé */
+button[disabled] {
+  	opacity: 0.6;
+  	cursor: not-allowed;
+ }

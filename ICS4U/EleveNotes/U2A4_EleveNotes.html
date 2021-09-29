@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Notes des élèves</title>
+		<!-- lien css-->
+		<link rel="stylesheet" type="text/css" href="U2A4_EleveNotes.css">
+		<!--changer l'image de l'onglet-->
+		<link rel="icon" href="https://i.dlpng.com/static/png/6852465_preview.png"/>
+		<!-- lien Javascript-->
+		<script type="text/javascript" src="U2A4_EleveNotes.js"></script>
+	</head>
+	<!-- Fait la fonction afficher quand la page s'ouvre pour afficher le tableau-->
+	<body onload="afficher()">
+		<h1>Notes des élèves</h1>
+		
+		<!-- Met les espaces de texte pour permêtre l'utilisateur d'entrer des donnés -->
+		<form class="info">
+			<label>Prénom : </label>
+			<input class="nom" type="text" name="prenom" id="prenom">
+			<label>Nom : </label>
+			<input class="nom" type="text" name="nom" id="nom"> <br><br>
+			<label>Note 1 : </label>
+			<input class="note" type="number" name="note1" id="note1">
+			<label>Note 2 : </label>
+			<input class="note" type="number" name="note2" id="note2"> 
+			<label>Note 3 : </label>
+			<input class="note" type="number" name="note3" id="note3">
+			<label>Note 4 : </label>
+			<input class="note" type="number" name="note4" id="note4">
+		</form>
+
+		<br>
+		
+		<!-- Groupe de bouton ajouter, supprimer et moyenne de l'élève-->
+		<!-- Chaque bouton fait appelle à une fonction-->
+		<div class="btn-group">
+			<button id="ajouter" class="button" onclick="ajouter()">Ajouter</button>
+			<button id="supprimer" class="button" onclick="supprimer()">Supprimer</button>
+			<button id="moyenne" class="button" onclick="moyenne()">Moyenne de l'élève</button>
+		</div>
+
+		<!-- Location dont les messages d'erreurs et le message de moyenne vas apparaître -->
+		<p id="outNote"></p>
+		
+		<p>
+			<br>
+		</p>
+		
+		<!-- Tableau qui vas afficher les noms et les notes-->
+		<table id="myTable">	
+			<tr>
+		    	<th>Prénom</th>
+		    	<th>Nom</th>
+		    	<th>Note 1</th>
+		    	<th>Note 2</th>
+		    	<th>Note 3</th>
+		    	<th>Note 4</th>
+		  	</tr>
+		</table>
+	</body>
+</html>
