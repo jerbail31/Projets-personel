@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bonne f&ecirc;te</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	<style type="text/css">
+		img	{
+			width: 100px;
+			height: 161.8px;
+		}
+		h1 {
+			text-align: center;
+			color: green;
+			font-family: fantasy;
+		}
+		.imageFinale {
+			margin : auto;
+			width: 100%;
+		}
+		.instructions {
+			text-align: center;
+			font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+			font-weight: bold;
+		}
+		th :hover {
+			cursor: pointer;
+		}
+		.btnDebut{
+			transition-duration: 0.4s;
+			border : none;
+			cursor: pointer;
+			background-color: #4CAF50;
+			color: white;
+			padding: 16px 32px;
+
+
+		}
+		.btnDebut:hover {
+			color : black;
+			background-color: white;
+			border: 2px solid #4CAF50;
+		}
+	</style>
+	<link rel="stylesheet" href="puzzleimg.css" />
+	<script src="puzzleimg.js"></script>
+	<script type="text/javascript">
+		
+		var carteChoisie = 0
+		
+		//permet d'avoir des images a differentes places
+		function randomizer() {
+
+			//array qui contient les images
+			var imgArray = new Array();
+			//Entre la source dans le Array
+			imgArray[0] = new Image();
+			imgArray[0].src = 'images/image0.jpg';
+
+			imgArray[1] = new Image();
+			imgArray[1].src = 'images/image1.jpg';
+
+			imgArray[2] = new Image();
+			imgArray[2].src = 'images/image2.jpg';
+			
+			imgArray[3] = new Image();
+			imgArray[3].src = 'images/image3.jpg';
+
+			imgArray[4] = new Image();
+			imgArray[4].src = 'images/image4.jpg';
+
+			imgArray[5] = new Image();
+			imgArray[5].src = 'images/image5.jpg';
+
+			imgArray[6] = new Image();
+			imgArray[6].src = 'images/image6.jpg';
+
+			imgArray[7] = new Image();
+			imgArray[7].src = 'images/image7.jpg';
+
+			imgArray[8] = new Image();
+			imgArray[8].src = 'images/image8.jpg';
+
+			imgArray[9] = new Image();
+			imgArray[9].src = 'images/image9.jpg';
+
+			imgArray[10] = new Image();
+			imgArray[10].src = 'images/image10.jpg';
+
+			imgArray[11] = new Image();
+			imgArray[11].src = 'images/image11.jpg';
+
+			imgArray[12] = new Image();
+			imgArray[12].src = 'images/image12.jpg';
+
+			imgArray[13] = new Image();
+			imgArray[13].src = 'images/image13.jpg';
+
+			imgArray[14] = new Image();
+			imgArray[14].src = 'images/image14.jpg';
+
+			imgArray[15] = new Image();
+			imgArray[15].src = 'images/image15.jpg'; 
+
+			imgArray[16] = new Image();
+			imgArray[16].src = 'images/image16.jpg';
+
+			imgArray[17] = new Image();
+			imgArray[17].src = 'images/image17.jpg';
+ 
+			//Array qui vont donner la source à l'image via ID
+			const IDImages1 = ["111", "112", "113","114","121","122","123","124","131","132","133","134","141","142","143","144"];
+			
+			const IDImages2 = ["211", "212", "213","214","221","222","223","224","231","232","233","234","241","242","243","244"];
+			
+			const IDImages3 = ["311", "312", "313","314","321","322","323","324","331","332","333","334","341","342","343","344"];
+			
+			//Donne des images aléatoires à chaque block d'image sans répéter
+			for (var i = 16; i >= 1; i--) {
+				
+				var x = Math.floor(Math.random() * imgArray.length);
+			
+			
+				document.getElementById(IDImages1[i-1]).src = imgArray[x].src;
+				document.getElementById(IDImages2[i-1]).src = imgArray[x].src;
+				document.getElementById(IDImages3[i-1]).src = imgArray[x].src;
+				
+				imgArray.splice(x, 1)
+			}
+		}
+
+		//fonction pour aller de la page d'acceuil pour aller au premier tableau
+		function debut() {
+			document.getElementById("acceuil").style.display = "none";
+			document.getElementById("tableau1").style.display = "block";
+
+
+		}
+
+		//fonction qui permet de passer du tableau 1 au 2e en gardant compte de la colomne pesé 
+		function tableau1(c) {
+			
+			document.getElementById("tableau1").style.display = "none";
+			document.getElementById("tableau2").style.display = "block";
+			carteChoisie = c;
+		}
+
+		//fonction qui permet de savoir quelle est l'image finale
+		function tableau2(c) {
+			document.getElementById("tableau2").style.display = "none";
+			document.getElementById("puzzle").style.display ="block";
+
+		
+			carteChoisie = carteChoisie + c;
+			document.getElementById(carteChoisie+300).style.display = "block";
+			var imgsource = document.getElementById(carteChoisie+200).src
+			
+			var puz1 = new PuzzleImg('div_id', imgsource, 5, 4, 600, 	450);	
+		}
+		function easterEgg(x) {
+			var couleur = ["Green", "Red", "Orange", "Blue", "Coral", "Purple", "Pink", "Yellow", "Aqua", "Chocolate", "DarkRed", "DeepPink", "Gold", "LightSeaGreen", "Black", "Lime"]
+			
+			document.body.style.backgroundColor = couleur[x];
+			
+		}
+	</script>
+</head>
+<body onload="randomizer()" style="text-align: center;">
+
+	<div id="acceuil">
+		<p class="debut">J'ai cr&eacute;&eacute; un petit jeu pour ta f&ecirc;te.</p>
+		<button class="btnDebut" onclick="debut()">Click sur le bouton pour commencer</button>
+	</div>
+	<div id="tableau1" style="display: none; margin: auto;">	
+		<p class="instructions">1. Choisi une image. <br>2. Click sur la fl&egrave;che qui pointe à ton image</p>
+		<table style=" margin-left: auto; margin-right: auto;">
+			<tr>
+				<th>
+					<img onclick="tableau1(c=10)"src="images/fleche.png">
+				</th>
+				<th>
+					<img onclick="tableau1(c=20)"src="images/fleche.png">
+				</th>
+				<th>
+					<img onclick="tableau1(c=30)"src="images/fleche.png">
+				</th>
+				<th>
+					<img onclick="tableau1(c=40)"src="images/fleche.png">
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<img onclick="easterEgg(x=0)" id="111">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=1)" id="121">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=2)" id="131">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=3)" id="141">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img onclick="easterEgg(x=4)" id="112">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=5)" id="122">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=6)" id="132">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=7)" id="142">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img onclick="easterEgg(x=8)" id="113">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=9)" id="123">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=10)" id="133">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=11)" id="143">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img onclick="easterEgg(x=12)" id="114">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=13)" id="124">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=14)" id="134">
+				</td>
+				<td>
+					<img onclick="easterEgg(x=15)" id="144">
+				</td>
+			</tr>
+		</table>
+	</div>
+		
+	<div id="tableau2" style="display: none;">	
+		<p class="instructions">1. Retrouve ton image <br> 2. Click sur la fl&egrave;che qui pointe à ton image</p>
+		<table style=" margin-left: auto; margin-right: auto;">
+			<tr>
+				<th>
+					<img onclick="tableau2(c=1)"src="images/fleche.png">
+				</th>
+				<th>
+					<img onclick="tableau2(c=2)"src="images/fleche.png">
+				</th>
+				<th>
+					<img onclick="tableau2(c=3)"src="images/fleche.png">
+				</th>
+				<th>
+					<img onclick="tableau2(c=4)"src="images/fleche.png">
+				</th>
+			</tr>
+			<tr>
+				<td>
+					<img id="221">
+				</td>
+				<td>
+					<img id="212">
+				</td>
+				<td>
+					<img id="213">
+				</td>
+				<td>
+					<img id="214">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img id="211">
+				</td>
+				<td>
+					<img id="232">
+				</td>
+				<td>
+					<img id="233">
+				</td>
+				<td>
+					<img id="224">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img id="231">
+				</td>
+				<td>
+					<img id="222">
+				</td>
+				<td>
+					<img id="223">
+				</td>
+				<td>
+					<img id="244">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<img id="241">
+				</td>
+				<td>
+					<img id="242">
+				</td>
+				<td>
+					<img id="243">
+				</td>
+				<td>
+					<img id="234">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id ="puzzle" style="display:none">
+		<p class="instructions">Voici un casse-t&ecirc;te avec ton image!!!</p>
+		<div id="div_id" class="puzelm">
+		</div>
+	</div>
+	<div id="imageFinale" class="imageFinale" style="display : none">
+		<p>
+			<h1>Bonne <span style="color:red">f&ecirc;te</span> <span style="color:blue">papa</span>!!!</h1>
+			<img class="puzelm" id="311" style="display : none">
+			<img id="312" style="display : none">
+			<img id="313" style="display : none">
+			<img id="314" style="display : none">
+			<img id="321" style="display : none">
+			<img id="322" style="display : none">
+			<img id="323" style="display : none">
+			<img id="324" style="display : none">
+			<img id="331" style="display : none">
+			<img id="332" style="display : none">
+			<img id="333" style="display : none">
+			<img id="334" style="display : none">
+			<img id="341" style="display : none">
+			<img id="342" style="display : none">
+			<img id="343" style="display : none">
+			<img id="344" style="display : none">
+		</p>
+	</div>
+</body>
+</html>
