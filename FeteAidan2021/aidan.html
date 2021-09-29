@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<style type="text/css">
+			button {color: red;
+					padding: 50px 0px;
+					text-align: center;
+  					text-decoration: blink;
+					background-color: darkorange;
+					width: 100%;
+					font-size: 75px;
+					border-radius: 8px;
+					transition-duration: 2s;
+
+				}
+			button:hover {
+					background-color: red;
+					color: orange;
+			}
+			p {
+				text-align: center;
+				font-size: 50px;
+				font-style: bold;
+				color: green;
+			}
+		</style>
+		<script type="text/javascript">
+			var i = 0;
+			var a = 1;
+			function ici() {
+				if (i==16) {
+					document.getElementById("fin").style.display = "block";
+					document.getElementById("bouton").style.display = "none";
+					document.getElementById("asTu").style.display = "none";
+
+				}
+				else {
+					document.getElementById("asTu").innerHTML = "As tu " + a +"?";
+					a++;
+					document.getElementById("bouton").innerHTML = "Encore";
+					if (i==3) {
+						document.getElementById("bouton").innerHTML = "Plus vite";
+					}
+					if (i==6) {
+						document.getElementById("bouton").innerHTML = "Hurry up!!!";
+					}
+					if (i==8) {
+						document.getElementById("bouton").innerHTML = "We don't have all day";
+					}
+					if (i==11) {
+						document.getElementById("bouton").innerHTML = "<:-)";
+					}
+					if (i==14) {
+						document.getElementById("bouton").innerHTML = "Last one";
+					}
+					if (i==15) {
+						document.getElementById("bouton").innerHTML = "Oops, now last one";
+					}
+				}
+				i++;
+			}
+		</script>
+		<meta charset="utf-8">
+		<title>Bonne fête</title>
+	</head>
+	<body>
+		<p id="asTu"></p>
+		<p class="fin" id="fin" style="display: none;">
+			Tu as 16 ans !!!!!!!! <br/> 
+			<img src="https://blog.yellowoctopus.com.au/wp-content/uploads/2017/06/yellow-octopus-happy-birthday-meme1.jpg" alt="L'image n'a pas fonctionée <:-(">
+		</p>
+		<button onclick="ici()" id="bouton">ICI</button>	
+	</body>
+	</html>
