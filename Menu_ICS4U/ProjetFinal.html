@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Titre sur l'onglet-->
+		<title>Commande</title>
+		<!-- lien css-->
+		<link rel="stylesheet" type="text/css" href="ProjetFinal.css">
+		<!--changer l'image de l'onglet-->
+		<link rel="icon" href="https://vignette.wikia.nocookie.net/diamondhuntonline6455/images/1/14/Poutine.png/revision/latest/scale-to-width-down/340?cb=20180923212730"/>
+		<!-- lien Javascript-->
+		<script type="text/javascript" src="ProjetFinal.js"></script>
+	</head>
+	<body>
+		<!-- Contient les élément de la partie accueil-->
+		<div id="accueil" class="accueil">
+			<h1 style="text-align: center;">Bienvenu au menu principal! </h1>
+			<br/>
+			<p style="text-align: center;">-  Pour commander, appuyez sur le bouton "Menu". <br>-  Pour voir les commandes en cours, appuyez sur le bouton "Commandes"</p>
+			<br/>
+			<!--Contient les boutons qui font appel à leur diiférente partie du site-->
+			<div class="btnAccueil">
+				<button onclick="accueil(x=1)">Commandes</button>
+				<button class="btnCommander" onclick="accueil(x=menu)">Menu</button>
+			</div>
+		</div>
+		<!--Contient les boutons qui font un retour-->
+		<div id="retourAccueil" class="divRetour" style="display: none">
+			<button class="retour" onclick="retourAccueil(x=1)">Retourner à l'accueil</button>
+			<button id="retour" class="retour" onclick="retourMenu()" style="display: none;">Retourner au menu</button>
+			<br><br><br><br>
+		</div>
+		<!--Contient les éléments de la partie menu -->
+		<div id="partieMenu" style="display : none">		
+			<!--Contient les boutons avec les catégories des items -->
+			<div class="principal" id="principal" style="display:block">
+				<button class="bouton1" id="frite" onclick="principal(x=0)" >
+					<span class="frite">Frite</span>
+				</button>
+				<button class="bouton2" id="poutine" onclick="principal(x=1)">
+					<span class="poutine">Poutine</span>
+				</button>
+				<button class="bouton3" id="combos" onclick="principal(x=2)">
+					<span class="combos">Combos</span>
+				</button>
+				<button class="bouton4" id="sandwich" onclick="principal(x=3)">
+					<span class="sandwich">Sandwichs</span>
+				</button>			
+				<button class="bouton5" id="cote" onclick="principal(x=4)">
+					<span class="cote">À Côtés</span>
+				</button>
+				<button class="bouton6" id="brevage" onclick="principal(x=5)">
+					<span class="brevage">Breuvages</span>
+				</button>
+			</div>
+			<!--Contient les boutons qui vont contenir le nom des items dans la catégorie cliqué-->
+			<div class="secondaire" id="secondaire" style="display:none">
+				<br><br>
+				<button class="sBouton" id="sBouton1" onclick="secondaire(y=1, r=r+1)"></button>
+				<button class="sBouton" id="sBouton2" onclick="secondaire(y=3, r=r+1)"></button>
+				<button class="sBouton" id="sBouton3" onclick="secondaire(y=5, r=r+1)"></button>
+				<button class="sBouton" id="sBouton4" onclick="secondaire(y=7, r=r+1)"></button>			
+			</div>
+			<!--Tableau qui vas contenir la commande en cours-->
+			<table class="tCommande"id="tCommande" style="display: none; width : 90%">	
+				<tr>
+			    	<th class="rang1">Item</th>
+			    	<th class="rang2">Quantité</th>
+			    	<th class="rang3">Prix</th>
+			    	<th class="rang4">Supprimer</th>
+			  	</tr>
+			</table>
+			<!--Contient les paragraphs qui vont montrer la commande finale-->
+			<div id="commandeFinal" class="commandeFinal" style="display : none;">
+				<p id="commandeFinalNom" class="commandeFinalNom"></p>
+				<p id="commandeFinalPrix" class="commandeFinalPrix"></p>
+			</div>
+			<!--Bouton qui fait appel à la fonction commande-->
+			<button id="commande" class="commande" onclick="commande()" disabled>Voir la commande</button>
+			<!--Bouton qui fait appel à la fonction caisse-->
+			<button id="caisse" class="caisse" onclick="caisse()" disabled>Passer à la caisse</button>
+			<!--Bouton quui fair appel à la fonction ajouteCommande-->
+			<button id="ajouteCommande" class="ajouteCommande" onclick="ajouteCommande()" style="display: none";>Confirmer la commande</button>
+			<!--Affiche le total, sous total et le nombre d'items-->
+			<h3 class="total" id="total">
+				Items : 0 ---- Sous total : 0.00$ ---- Total : 0.00$
+			</h3>
+			<!--Affiche le message final après avoir commander-->
+			<div id="apresCommande" class="apresCommande" style="display: none">
+				<h1>Merci d'avoir commandé chez-nous. <br><h1>
+				<h3>Votre commande a été ajouté à notre liste de commandes</h3>
+				<h1 style="color:red"; id="numeroCommande"></h1>
+				<button class="btnApresCommande" onclick="retourAccueil(x=0)">
+					Retourner à l'accueil
+				</button>
+
+			</div>			
+		</div>
+		<!--Contient les élément de la patie des commandes-->
+		<div id="partieCommande"  style="display: none; padding-top: 15px;">
+			<table class="tEnCours"id="tEnCours">	
+				<tr>
+			    	<th class="rang1C"># de commande</th>
+			    	<th class="rang2C">Commande</th>
+			    	<th class="rang3C">Terminé</th>
+			  	</tr>
+			</table>
+		</div>
+	</body>
+</html>

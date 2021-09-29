@@ -1,0 +1,300 @@
+.btnAccueil {
+	text-align: center;
+}
+
+.accueil button {
+	margin: 10px;
+	background-color: red;
+	border: none;
+	color: white;
+	padding: 20px;
+  	text-align: center;
+	font-size: 35px;
+	cursor: pointer;
+	width: 350px;
+	height: 250px;
+	border-radius: 12px;
+}
+
+.principal button{
+	border: solid;
+	border-radius: 3px;
+	color: red;
+}
+
+span {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+}
+/*Ajoute une image à l'arrrière plan*/
+.bouton1 {
+	width: 240px;
+	height: 150px;
+	font-size: 35px;
+	font-weight: bold;
+	cursor: pointer;
+	background: url(items/frite.png);
+
+}
+/*Rends le "span" visible lorsque la souris est dessus le bouton */
+.bouton1:hover .frite {
+	visibility: visible;
+}
+/*Ajoute une image à l'arrrière plan*/
+.bouton2 {
+	background: url(items/poutine.png);
+	width: 240px;
+	height: 150px;
+	font-size: 35px;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+/*Rends le "span" visible lorsque la souris est dessus le bouton */
+.bouton2:hover .poutine {
+	visibility: visible;
+}
+/*Ajoute une image à l'arrrière plan*/
+.bouton3 {
+	background: url(items/combo.png);
+	width: 240px;
+	height: 150px;
+	font-size: 35px;
+	font-weight: bold;
+	cursor: pointer;
+}
+/*Rends le "span" visible lorsque la souris est dessus le bouton */
+.bouton3:hover .combos {
+	visibility: visible;
+}
+/*Ajoute une image à l'arrrière plan*/
+.bouton4 {
+	background: url(items/sandwich.png);
+	width: 240px;
+	height: 150px;
+	font-size: 35px;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+/*Rends le "span" visible lorsque la souris est dessus le bouton */
+.bouton4:hover .sandwich {
+	visibility: visible;
+}
+/*Ajoute une image à l'arrrière plan*/
+.bouton5 {
+	background: url(items/cote.png);
+	width: 240px;
+	height: 150px;
+	font-size: 35px;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+/*Rends le "span" visible lorsque la souris est dessus le bouton */
+.bouton5:hover .cote {
+	visibility: visible;
+}
+/*Ajoute une image à l'arrrière plan*/
+.bouton6 {
+	background: url(items/brevage.png);
+	width: 240px;
+	height: 150px;
+	font-size: 35px;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+/*Rends le "span" visible lorsque la souris est dessus le bouton */
+.bouton6:hover .brevage {
+	visibility: visible;
+}
+
+.divRetour .retour {
+	width: 150px;
+	height: 70px;
+	font-size: 15px;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: red;
+	float: left;
+}
+
+.secondaire .sBouton {
+	width: 240px;
+	height: 150px;
+	font-size: 25px;
+	font-weight: bold;
+	cursor: pointer;
+	color: red;
+	border: solid;
+	border-radius: 3px;
+	margin: 0px;
+
+}
+
+/* Modifie la bordure des éléments du tableau */
+
+table, th, td {
+  	border: 1px solid black;
+}
+
+.tCommande {
+	border-collapse: collapse;
+	margin-top: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+/* Modifie l'apparence des donnés du tableau */
+td {
+  	padding: 10px;
+  	text-align: left;
+  	min-height: 35px;
+}
+
+.rang1, .rang2, .rang3, .rang4 {
+	color: red;
+	padding: 15px;
+	height : 50px;
+	width: 10%;
+}
+.rang1 {
+	width: 50%;
+}
+.rang4 {
+	width : 20%;
+}
+/* Modifie l'apparence des titres du tableau */
+th {
+	
+}
+
+
+/* Ajoute l'effet d'avoir un tableau avec un arrière plan rayé */
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.btnTableau {
+	width: 100%;
+	min-height: 100%;
+	color: red;
+	font-size: 20px;
+	font-weight: bold;
+}
+.btnTableau:hover {
+	background-color: red;
+	color: black;
+}
+
+.commande {
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	position: fixed;
+	right: 205px;
+	bottom: 50px;
+	border-color: red;
+	color: red;
+	margin-right: 5px;
+}
+
+.caisse {
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	position: fixed;
+	right: 5px;
+	bottom: 50px;
+	border-color: red;
+	color: red;
+}
+.ajouteCommande {
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	position: fixed;
+	right: 5px;
+	bottom: 50px;
+	border-color: red;
+	color: red;
+}
+.total {
+	position: fixed;
+	right: 5px;
+	bottom: 0;
+}
+
+/* Ajoute un effet lorsqu'un bouton est désactivé */
+button[disabled] {
+  	opacity: 0.6;
+  	cursor: not-allowed;
+ }
+
+.commandeFinal .commandeFinalNom {
+	border: solid;
+	border-width: 1px;
+	border-color: grey;
+	border-right: none;
+	width: 60%;
+	float: left;
+	margin-left: 10%;
+}
+.commandeFinal .commandeFinalPrix {
+	border: solid;
+	border-left: none;
+	border-width: 1px;
+	border-color: grey;
+	width: 20%;
+	float: right;
+	text-align: center;
+	margin-right: 9.6%;
+}
+
+.apresCommande {
+	text-align: center;
+}
+
+.apresCommande .btnApresCommande {
+	margin: 10px;
+	background-color: red;
+	border: none;
+	color: white;
+	padding: 20px;
+  	text-align: center;
+	font-size: 35px;
+	cursor: pointer;
+	width: 350px;
+	height: 250px;
+	border-radius: 12px;
+}
+.rang1C {
+	height: 50px;
+	width: 10%;
+	text-align :center;
+}
+
+.rang2C{
+	width: 60%;
+}
+.rang3C {
+	width: 25%;
+}
+
+.tEnCours {
+	width: 95%;
+	margin-right: 2.5%;
+	margin-left: 2.5%;
+}
