@@ -1,5 +1,5 @@
 # Projets-personel
-([Link to this README](https://jerbail31.github.io/Projets-personel/README.md)<br/>
+([Link to this README](https://jerbail31.github.io/Projets-personel/README.md#projets-personel))<br/>
 Click on project name to view project result<br/>
 <br/>
 ([FetePapa2021](https://jerbail31.github.io/Projets-personel/FetePapa2021/index.html)) : Puzzle for dad's Bday<br/>
