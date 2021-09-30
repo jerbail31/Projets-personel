@@ -10,4 +10,3 @@ Click on project name to view project result<br/>
 ([Notepad](https://jerbail31.github.io/notepad/notepad/app/index.html)) : Final project for 11th grade class<br/>
 *The source code is not it this repo<br/>
 <br/>
-Hello!!!
